@@ -25,7 +25,11 @@ url: "https://nix.hr" # the base hostname & protocol for your site, e.g. http://
 # github_username: jekyll
 
 # Build settings
-remote-theme: daattali/beautiful-jekyll@6.0.1
+# No `remote_theme` here on purpose. This site renders entirely from the
+# beautiful-jekyll files vendored into _layouts/, _includes/ and assets/, which
+# have diverged from (and are ahead of) the upstream 6.0.1 tag. Those local
+# files take precedence over a theme anyway, so pulling the remote theme would
+# only add unused demo images and a network dependency to every build.
 
 navbar-col: "#EAEAEA"
 navbar-text-col: "#404040"
@@ -78,6 +82,5 @@ exclude:
 
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-paginate
