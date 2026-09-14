@@ -1,0 +1,8 @@
+{%- comment -%}
+  Tells search engines the language versions of the home page are translations
+  of each other. The first entry in site.languages is the x-default.
+{%- endcomment -%}
+{%- for code in site.languages %}
+  <link rel="alternate" hreflang="{{ code }}" href="{{ site.data.home[code].url | absolute_url }}">
+{%- endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ site.data.home[site.languages.first].url | absolute_url }}">

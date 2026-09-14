@@ -1,0 +1,173 @@
+# Croatian copy for the home page, served at /.
+# en.yml holds the English twin with the same keys; keep the two in step.
+
+url: /
+language_label: HR
+language_name: Hrvatski
+
+nav:
+  O nama: /#about
+  Čime se bavimo: /#services
+  Reference: /#references
+  Kontakt: /#contact
+
+hero:
+  tagline: Unaprjeđivanje politika i prakse očuvanja prirode
+  image_alt: "Park prirode Telašćica iz zraka: jezero Mir i klifovi Dugog otoka"
+
+about:
+  title: O nama
+  lead: >-
+    NiX pruža usluge stručnog savjetovanja u zaštiti prirode, sjedište je u Zagrebu.
+    Radimo s međunarodnim organizacijama, tijelima javne vlasti, ustanovama za
+    upravljanje zaštićenim područjima i organizacijama civilnog društva u Hrvatskoj,
+    na Jadranu, u Sredozemlju i jugoistočnoj Europi — pomažemo sektoru zaštite prirode
+    da dosegne profesionalne standarde i uvodimo bioraznolikost u politike i prakse
+    koje o njoj ovise.
+  founder: >-
+    Iza NiX-a stoji Željka Rajković, magistra biologije (smjer ekologija) i magistra
+    upravljanja okolišem (Imperial College London), s više od dvadeset godina rada na
+    zaštićenim područjima. Članica je Svjetske komisije za zaštićena područja IUCN-a
+    (IUCN WCPA), mreže Conservation Standards Network Europe (CCNet Europe) i IUCN-ove
+    Mediteranske stručne skupine za ocjenjivanje morskih područja za Zelenu listu (EAGL).
+
+services:
+  title: Čime se bavimo
+  intro: >-
+    Pratimo inicijativu zaštite prirode kroz cijeli životni ciklus — od analize problema
+    i planiranja, preko financiranja i provedbe, do vrednovanja i sljedećeg ciklusa
+    planiranja.
+  # icon: a Font Awesome 5 free solid icon name, without the "fa-" prefix
+  items:
+    - title: Planiranje upravljanja zaštićenim područjima
+      icon: map-marked-alt
+      text: >-
+        Planovi upravljanja, akcijski planovi i planovi zoniranja za nacionalne parkove,
+        parkove prirode, područja ekološke mreže Natura 2000 i morska zaštićena područja —
+        osmišljeni kao participativni procesi, a ne uredske vježbe. Pišemo i smjernice po
+        kojima drugi planiraju: <em>Smjernice za planiranje upravljanja zaštićenim
+        područjima i/ili područjima ekološke mreže u Hrvatskoj</em> te pripadajući vodiči
+        za vrednovanje u redovnoj su upotrebi u ministarstvu i u javnim ustanovama.
+    - title: Učinkovitost upravljanja i Zelena lista
+      icon: clipboard-check
+      text: >-
+        Ocjena stvarne kvalitete upravljanja zaštićenim područjima primjenom metodologija
+        METT i RAPPAM, standarda IUCN Zelene liste — članovi smo IUCN-ove Mediteranske
+        stručne skupine za ocjenjivanje morskih područja — te novog globalnog okvira
+        IUCN WCPA za ocjenu učinkovitosti zaštićenih i očuvanih područja, na razini
+        lokaliteta, sustava i regije, s naglaskom na mjerenju stvarnih ishoda zaštite.
+    - title: Standardi zaštite prirode i prilagodljivo upravljanje
+      icon: project-diagram
+      text: >-
+        Primjena Standarda zaštite prirode (CMP Open Standards for the Practice of
+        Conservation) na projekte, programe i cijele organizacije: teorije promjene, lanci
+        rezultata, okviri praćenja i disciplina učenja iz njih.
+    - title: Uključivanje dionika i facilitacija
+      icon: users
+      text: >-
+        Osmišljavanje i vođenje radionica, radnih skupina, foruma dionika i konferencija —
+        Territorial Labs, World Café, Project in a Day, višedionički sporazumi. Educirani
+        smo facilitatori i treneri facilitacije, a proces osmišljavamo zajedno s
+        naručiteljem prije nego što ga provedemo.
+    - title: Politike EU-a, obnova prirode i financiranje
+      icon: landmark
+      text: >-
+        Podrška provedbi europske politike i zakonodavstva zaštite prirode, uključujući
+        Uredbu o obnovi prirode i nacionalne planove obnove prirode: analiza politika i
+        nedostataka, procjena socio-ekonomskih učinaka mjera obnove, okviri praćenja,
+        financiranje obnove. Pripremamo i vodimo projektne prijedloge za programe LIFE,
+        Interreg, EFRR i druge — i vodili smo ih kao korisnici, a ne samo pisali.
+    - title: Jačanje kapaciteta i organizacijski razvoj
+      icon: chalkboard-teacher
+      text: >-
+        Edukacija i mentorstvo za djelatnike zaštićenih područja, stručnjake u zaštiti
+        prirode i organizacije civilnog društva: planiranje upravljanja, upravljanje
+        morskim zaštićenim područjima i njihovo održivo financiranje, vještine
+        facilitacije, komunikacija i marketing, strateški i organizacijski razvoj, praćenje
+        i vrednovanje.
+    - title: Zaštita mora i obale
+      icon: water
+      text: >-
+        Morska zaštićena područja, SPAMI područja i Protokol SPA/BD Barcelonske konvencije,
+        upravljanje obalnim močvarnim staništima, koordinacija nacionalnih protokola
+        praćenja naselja vrste <em>Posidonia oceanica</em> i koraligenskih zajednica,
+        prostorno planiranje na moru i planiranje održivog nautičkog turizma.
+    - title: Održivi turizam u zaštićenim područjima
+      icon: hiking
+      text: >-
+        Planovi i strategije upravljanja održivim turizmom, tržišno utemeljene strategije
+        formiranja cijena i procjena koristi za nacionalne parkove i parkove prirode.
+
+references:
+  title: Reference
+  subtitle: Naručitelji i partneri
+  groups:
+    - title: Međunarodne organizacije i agencije
+      items:
+        - IUCN — Međunarodna unija za očuvanje prirode (uključujući ured ECARO i radnu skupinu WCPA za učinkovitost zaštite)
+        - UNDP Hrvatska
+        - Regionalni centar za posebno zaštićena područja (SPA/RAC), UNEP-MAP, Tunis
+        - WWF Mediterranean Programme Office
+        - ELMEN EEIG i Institut za krajobraznu ekologiju Slovačke akademije znanosti
+        - CCNet Europe e.V.
+        - Zaklada ProPark, Rumunjska
+        - Nature Returns, Portugal
+    - title: Tijela javne vlasti
+      items:
+        - Ministarstvo zaštite okoliša i zelene tranzicije (prije Ministarstvo kulture / Ministarstvo gospodarstva i održivog razvoja / Hrvatska agencija za okoliš i prirodu)
+        - Grad Pula-Pola
+        - Pula Herculanea d.o.o.
+    - title: Ustanove za upravljanje zaštićenim područjima
+      items:
+        - Javna ustanova Nacionalni park Brijuni
+        - Javna ustanova Park prirode Telašćica
+        - Javna ustanova Park prirode Lastovsko otočje
+        - Zaštita prirode Dubrovačko-neretvanske županije
+        - Natura Histrica
+        - Javno preduzeće za nacionalne parkove Crne Gore
+    - title: Zaštićena područja obuhvaćena našim planovima
+      items:
+        - Nacionalni park Krka
+        - Park prirode Dinara
+        - Park prirode Biokovo
+        - Nacionalni park Brijuni
+        - Park prirode Telašćica
+        - Park prirode Lastovsko otočje
+        - kanjon rijeke Cetine
+        - Park prirode Ulcinjska solana (CG)
+        - nacionalni parkovi Biogradska gora, Skadarsko jezero, Prokletije i Lovćen (CG)
+        - nacionalni morski park Karaburun-Sazani (AL)
+        - te pripadajuća područja ekološke mreže Natura 2000
+    - title: Civilno društvo
+      items:
+        - Udruga Biom
+        - Udruga za prirodu, okoliš i održivi razvoj Sunce
+        - WWF Adria
+
+contact:
+  title: Kontakt
+  name: NiX — Željka Rajković
+  address: Medulićeva 1, HR-10000 Zagreb, Hrvatska
+  phone_label: Telefon
+  phone: "+385 92 2044 100"
+  email_label: E-pošta
+  email: zeljka.rajkovic@gmail.com
+  profiles_label: Profili
+  linkedin: https://www.linkedin.com/in/zeljkarajkovic/
+  researchgate: https://www.researchgate.net/profile/Zeljka-Rajkovic
+  languages_label: Radni jezici
+  languages: hrvatski, engleski, španjolski
+
+credits:
+  label: Fotografije
+  photos:
+    - subject: Telašćica
+      author: Carsten Steger
+      source: https://commons.wikimedia.org/wiki/File:Aerial_image_of_Tela%C5%A1%C4%87ica_Nature_Park_(view_from_the_south).jpg
+      license: CC BY-SA 4.0
+      license_url: https://creativecommons.org/licenses/by-sa/4.0/
+    - subject: Posidonia oceanica
+      author: Karim Saari
+      source: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica_meadow_-_Underwater_observation_and_exploration_-_Calanque_de_Sormiou_-_2022.jpg
+      license: CC BY 4.0
+      license_url: https://creativecommons.org/licenses/by/4.0/

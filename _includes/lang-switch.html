@@ -1,0 +1,10 @@
+{%- comment -%}
+  HR | EN switch for the navbar. Order comes from site.languages; each entry's
+  URL and label come from its _data/home/<code>.yml file.
+{%- endcomment -%}
+<li class="nav-item nx-lang">
+  {%- for code in site.languages -%}
+    {%- assign lang = site.data.home[code] %}
+    <a class="nav-link{% if code == page.language %} active{% endif %}" href="{{ lang.url | relative_url }}" hreflang="{{ code }}" lang="{{ code }}" title="{{ lang.language_name }}"{% if code == page.language %} aria-current="page"{% endif %}>{{ lang.language_label }}</a>
+  {%- endfor %}
+</li>
