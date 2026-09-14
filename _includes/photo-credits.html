@@ -1,0 +1,13 @@
+{%- comment -%}
+  Attribution for the Wikimedia Commons photos on the home page, as their
+  CC BY / CC BY-SA licences require.
+{%- endcomment -%}
+{%- assign credits = site.data.home[page.language].credits -%}
+{%- if credits %}
+<p class="nx-credits text-muted">
+  {{ credits.label }}:
+  {%- for photo in credits.photos %}
+  <a href="{{ photo.source }}">{{ photo.subject }}</a>, {{ photo.author }}, <a href="{{ photo.license_url }}">{{ photo.license }}</a>{% unless forloop.last %} ·{% endunless %}
+  {%- endfor %}
+</p>
+{%- endif %}

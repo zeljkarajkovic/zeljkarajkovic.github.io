@@ -18,11 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ""
+title: "NiX"
 email: zeljka.rajkovic@gmail.com
 url: "https://nix.hr" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username: jekyll
+
+# Home page languages, in the order the navbar switch shows them. Each code
+# needs a copy file at _data/home/<code>.yml; the first one is the default
+# served at /.
+languages:
+  - hr
+  - en
 
 # Build settings
 # No `remote_theme` here on purpose. This site renders entirely from the
@@ -31,17 +38,20 @@ url: "https://nix.hr" # the base hostname & protocol for your site, e.g. http://
 # files take precedence over a theme anyway, so pulling the remote theme would
 # only add unused demo images and a network dependency to every build.
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
+site-css:
+  - "/assets/css/nix.css"
+
+navbar-col: "#24493F"
+navbar-text-col: "#F2F7F4"
+navbar-border-col: "#1B3A32"
 page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#EAEAEA"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+text-col: "#22302B"
+link-col: "#1E7560"
+hover-col: "#155446"
+footer-col: "#172622"
+footer-text-col: "#9DB0A8"
+footer-link-col: "#E2EBE7"
+footer-hover-col: "#9FD8C2"
 
 date_format: "%B %-d, %Y"
 

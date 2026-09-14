@@ -1,9 +1,17 @@
+{%- comment -%}
+  Pages whose `language` has copy in _data/home/ (the bilingual home page) take
+  their menu, brand link and language switch from that data file; every other
+  page falls back to site.navbar-links as before.
+{%- endcomment -%}
+{%- assign home = site.data.home[page.language] -%}
+{%- assign navbar_links = home.nav | default: site.navbar-links -%}
+{%- assign brand_url = home.url | default: '/' -%}
 <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
 
   {%- if site.title-img -%}
-    <a class="navbar-brand navbar-brand-logo" href="{{ '/' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
+    <a class="navbar-brand navbar-brand-logo" href="{{ brand_url | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
   {%- elsif site.title -%}
-    <a class="navbar-brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+    <a class="navbar-brand" href="{{ brand_url | absolute_url }}">{{ site.title }}</a>
   {%- endif -%}
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +20,7 @@
 
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
-      {%- for link in site.navbar-links -%}
+      {%- for link in navbar_links -%}
         {%- if link[1].first %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
@@ -38,6 +46,9 @@
           </a>
         </li>
       {%- endif -%}
+      {%- if home %}
+        {% include lang-switch.html %}
+      {%- endif %}
     </ul>
   </div>
 

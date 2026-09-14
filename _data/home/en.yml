@@ -1,0 +1,172 @@
+# English copy for the home page, served at /en/.
+# hr.yml holds the Croatian twin with the same keys; keep the two in step.
+
+url: /en/
+language_label: EN
+language_name: English
+
+nav:
+  About: /en/#about
+  What we do: /en/#services
+  References: /en/#references
+  Contact: /en/#contact
+
+hero:
+  tagline: Advancing policy and practice of biodiversity conservation
+  image_alt: "Telašćica Nature Park from the air: Mir lake and the cliffs of Dugi otok"
+
+about:
+  title: About
+  lead: >-
+    NiX is an expert consultancy in nature conservation based in Zagreb, Croatia. We work
+    with international organisations, governments, protected area authorities and civil
+    society across Croatia, the Adriatic, the Mediterranean and South-East Europe —
+    helping the nature conservation sector reach professional standards and mainstreaming
+    biodiversity into the policies and practices that depend on it.
+  founder: >-
+    Behind NiX is Željka Rajković, MSc in Biology (Ecology) and MSc in Environmental
+    Management (Imperial College London), with more than twenty years of work on protected
+    areas. She is a member of the IUCN World Commission on Protected Areas (WCPA), the
+    Conservation Standards Network Europe (CCNet Europe) and the IUCN Mediterranean Marine
+    Expert Assessment Group for the Green List (EAGL).
+
+services:
+  title: What we do
+  intro: >-
+    We accompany a conservation initiative through its whole life cycle — from problem
+    analysis and planning, through funding and implementation, to evaluation and the next
+    planning round.
+  # icon: a Font Awesome 5 free solid icon name, without the "fa-" prefix
+  items:
+    - title: Protected area management planning
+      icon: map-marked-alt
+      text: >-
+        Management plans, action plans and zoning plans for national parks, nature parks,
+        Natura 2000 sites and marine protected areas — designed as participatory processes,
+        not desk exercises. We also write the guidance others plan by: the <em>Management
+        Planning Guidelines for Protected Areas and/or Natura 2000 Sites in Croatia</em> and
+        the accompanying evaluation guides are used by the ministry and by public
+        institutions nationwide.
+    - title: Management effectiveness and the Green List
+      icon: clipboard-check
+      text: >-
+        Assessment of how well protected areas are actually managed, using METT, RAPPAM,
+        the IUCN Green List standard — we sit on the IUCN Mediterranean Marine Expert
+        Assessment Group — and the new IUCN WCPA global framework for assessing protected
+        and conserved area effectiveness, at site, system and regional level, with a focus
+        on measuring real conservation outcomes.
+    - title: Conservation Standards and adaptive management
+      icon: project-diagram
+      text: >-
+        Application of the Conservation Standards (CMP Open Standards for the Practice of
+        Conservation) to projects, programmes and whole organisations: theories of change,
+        results chains, monitoring frameworks and the discipline of learning from them.
+    - title: Stakeholder engagement and facilitation
+      icon: users
+      text: >-
+        Design and facilitation of workshops, working groups, stakeholder forums and
+        conferences — Territorial Labs, World Café, Project in a Day, multi-stakeholder
+        contracts. We are trained facilitators and facilitation trainers, and we co-design
+        the process before we run it.
+    - title: EU policy, nature restoration and funding
+      icon: landmark
+      text: >-
+        Support to the implementation of EU nature conservation policy and legislation,
+        including the Nature Restoration Regulation and National Nature Restoration Plans:
+        policy and gap analysis, socio-economic assessment of restoration measures,
+        monitoring frameworks, restoration finance. We prepare and manage project proposals
+        for LIFE, Interreg, ERDF and other programmes — and we have led them as
+        beneficiaries, not only written them.
+    - title: Capacity building and organisational development
+      icon: chalkboard-teacher
+      text: >-
+        Training and coaching for protected area staff, conservation practitioners and
+        conservation CSOs: management planning, MPA management and sustainable financing,
+        facilitation skills, communication and marketing, strategic and organisational
+        development, monitoring and evaluation.
+    - title: Marine and coastal conservation
+      icon: water
+      text: >-
+        Marine protected areas, SPAMIs and the Barcelona Convention SPA/BD Protocol, coastal
+        wetlands governance, coordination of national monitoring protocols for
+        <em>Posidonia oceanica</em> beds and coralligenous communities, marine spatial and
+        sustainable nautical tourism planning.
+    - title: Sustainable tourism in protected areas
+      icon: hiking
+      text: >-
+        Sustainable tourism plans and management strategies, market-based pricing strategies
+        and benefit assessment for national and nature parks.
+
+references:
+  title: References
+  subtitle: Clients and partners
+  groups:
+    - title: International organisations and agencies
+      items:
+        - IUCN — International Union for Conservation of Nature (incl. the ECARO office and the WCPA Task Force on Conservation Effectiveness)
+        - UNDP Croatia
+        - UNEP-MAP Regional Activity Centre for Specially Protected Areas (SPA/RAC), Tunis
+        - WWF Mediterranean Programme Office
+        - ELMEN EEIG and the Institute of Landscape Ecology, Slovak Academy of Sciences
+        - CCNet Europe e.V.
+        - ProPark Foundation, Romania
+        - Nature Returns, Portugal
+    - title: Governments and public authorities
+      items:
+        - Croatian Ministry of Environmental Protection and Green Transition (previously Croatian Ministry of Culture / Croatian Ministry of Economy and Sustainable Development / Croatian Agency for the Environment and Nature)
+        - City of Pula-Pola
+        - Pula Herculanea Ltd.
+    - title: Protected area institutions
+      items:
+        - Brijuni National Park
+        - Telašćica Nature Park
+        - Lastovo Islands Nature Park
+        - Protected Areas of Dubrovnik-Neretva County
+        - Protected Areas of Istria County – Natura Histrica
+        - Public Company for National Parks of Montenegro
+    - title: Protected areas our plans cover
+      items:
+        - Krka National Park
+        - Dinara Nature Park
+        - Biokovo Nature Park
+        - Brijuni National Park
+        - Telašćica Nature Park
+        - Lastovo Islands Nature Park
+        - the Cetina River Canyon
+        - Ulcinj Salina Nature Park (ME)
+        - Biogradska Gora, Skadar Lake, Prokletije and Lovćen national parks (ME)
+        - Karaburun-Sazani national marine park (AL)
+        - and the Natura 2000 sites associated with them
+    - title: Civil society
+      items:
+        - Biom Association
+        - Sunce — Association for Nature, Environment and Sustainable Development
+        - WWF Adria
+
+contact:
+  title: Contact
+  name: NiX — Željka Rajković
+  address: Medulićeva 1, HR-10000 Zagreb, Croatia
+  phone_label: Phone
+  phone: "+385 92 2044 100"
+  email_label: E-mail
+  email: zeljka.rajkovic@gmail.com
+  profiles_label: Profiles
+  linkedin: https://www.linkedin.com/in/zeljkarajkovic/
+  researchgate: https://www.researchgate.net/profile/Zeljka-Rajkovic
+  languages_label: Working languages
+  languages: Croatian, English, Spanish
+
+credits:
+  label: Photos
+  photos:
+    - subject: Telašćica
+      author: Carsten Steger
+      source: https://commons.wikimedia.org/wiki/File:Aerial_image_of_Tela%C5%A1%C4%87ica_Nature_Park_(view_from_the_south).jpg
+      license: CC BY-SA 4.0
+      license_url: https://creativecommons.org/licenses/by-sa/4.0/
+    - subject: Posidonia oceanica
+      author: Karim Saari
+      source: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica_meadow_-_Underwater_observation_and_exploration_-_Calanque_de_Sormiou_-_2022.jpg
+      license: CC BY 4.0
+      license_url: https://creativecommons.org/licenses/by/4.0/

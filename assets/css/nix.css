@@ -1,0 +1,424 @@
+/* NiX site styles, loaded on every page after beautifuljekyll.css (see
+   `site-css` in _config.yml). The theme colours it reads from _config.yml
+   (navbar, links, footer) are set there; this file styles the language
+   switch and the bilingual home page (_layouts/landing.html). */
+
+:root {
+  --nx-pine: #24493F;
+  --nx-teal: #1E7560;
+  --nx-ink: #22302B;
+  --nx-muted: #56655F;
+  --nx-mist: #EFF4F1;
+  --nx-line: #D5DFDA;
+  --nx-mint: #9FD8C2;
+  --nx-deep: #0B2420;
+  --nx-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --nx-serif: 'Lora', 'Times New Roman', serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* --- Navbar --- */
+
+/* The theme's hover colour is the link colour, which disappears on the dark
+   pine navbar. */
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link:focus {
+  color: var(--nx-mint);
+}
+
+.navbar-custom .nx-lang {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-custom .nx-lang .nav-link {
+  opacity: 0.72;
+}
+
+.navbar-custom .nx-lang .nav-link.active {
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.4em;
+}
+
+.navbar-custom .nx-lang .nav-link + .nav-link {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1199px) {
+  .navbar-custom .nx-lang .nav-link:first-child {
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-custom .navbar-nav .nav-item.nx-lang {
+    margin-left: 1.25rem;
+  }
+
+  /* The theme strips right padding from the last nav link; inside the switch
+     only the final language should lose it. */
+  .navbar-custom.navbar-expand-xl .navbar-nav .nav-item.nx-lang:last-child .nav-link {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+
+  .navbar-custom.navbar-expand-xl .navbar-nav .nav-item.nx-lang:last-child .nav-link:last-child {
+    padding-right: 0;
+  }
+}
+
+/* --- Home page: shared --- */
+
+.nx {
+  color: var(--nx-ink);
+}
+
+.nx-section {
+  padding-block: 4.5rem;
+  scroll-margin-top: 3.5rem; /* clear the short fixed navbar */
+}
+
+/* The theme fakes the same offset with a pseudo-element on :target, which
+   would push these sections down a second time. */
+.nx-section:target::before {
+  display: none;
+}
+
+.nx-section-head {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.nx-h2 {
+  font-family: var(--nx-sans);
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.nx-intro {
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  color: var(--nx-muted);
+  margin: 1rem 0 0;
+}
+
+.nx-eyebrow {
+  font-family: var(--nx-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--nx-teal);
+  margin: 0;
+}
+
+.nx a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (min-width: 992px) {
+  .nx-section {
+    padding-block: 6.5rem;
+  }
+}
+
+/* --- Hero --- */
+
+.nx-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(26rem, 72vh, 46rem);
+  margin-top: 3.1875rem; /* the theme's small navbar: 50px + 1px border */
+  overflow: hidden;
+  color: #FFFFFF;
+  background-color: var(--nx-deep);
+}
+
+.nx-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% 50%;
+}
+
+.nx-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(20deg, rgba(4, 22, 36, 0.78) 0%, rgba(4, 22, 36, 0.35) 38%, rgba(4, 22, 36, 0) 65%);
+}
+
+.nx-hero-body {
+  position: relative;
+  z-index: 1;
+  padding-block: 3rem 3.5rem;
+}
+
+.nx-hero-title {
+  font-family: var(--nx-sans);
+  font-weight: 800;
+  font-size: clamp(4.5rem, 12vw, 8.5rem);
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.nx-hero-tagline {
+  font-family: var(--nx-serif);
+  font-style: italic;
+  font-size: clamp(1.25rem, 2.6vw, 1.875rem);
+  line-height: 1.25;
+  max-width: 24ch;
+  margin: 0.875rem 0 0;
+  text-wrap: balance;
+  text-shadow: 0 1px 12px rgba(4, 22, 36, 0.45);
+}
+
+@media (min-width: 1200px) {
+  .nx-hero {
+    margin-top: 5.6875rem; /* the theme's full navbar, before it shrinks on scroll */
+  }
+}
+
+/* --- About --- */
+
+.nx-about-grid {
+  display: grid;
+  gap: 1.25rem 3rem;
+}
+
+.nx-lead {
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  line-height: 1.5;
+  max-width: 44rem;
+  margin: 0;
+}
+
+.nx-founder {
+  max-width: 44rem;
+  line-height: 1.65;
+  color: var(--nx-muted);
+  margin: 1.75rem 0 0;
+}
+
+@media (min-width: 992px) {
+  .nx-about-grid {
+    grid-template-columns: 10rem minmax(0, 1fr);
+  }
+
+  .nx-about .nx-eyebrow {
+    padding-top: 0.625rem;
+  }
+}
+
+/* --- What we do --- */
+
+.nx-services {
+  background-color: var(--nx-mist);
+}
+
+.nx-service-grid {
+  display: grid;
+  gap: 2.5rem 3.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nx-service {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  column-gap: 1.125rem;
+  align-content: start;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--nx-line);
+}
+
+.nx-service-icon {
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  box-shadow: inset 0 0 0 1px var(--nx-line);
+  color: var(--nx-teal);
+  font-size: 1.0625rem;
+}
+
+.nx-h3 {
+  font-family: var(--nx-sans);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  margin: 0.5rem 0 0.625rem;
+  text-wrap: balance;
+}
+
+.nx-service p {
+  grid-column: 2;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--nx-muted);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .nx-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* --- References --- */
+
+.nx-refs {
+  position: relative;
+  color: #DDE9E3;
+  background: var(--nx-deep) url("../img/band-posidonia.jpg") center / cover no-repeat;
+}
+
+.nx-refs::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(6, 30, 26, 0.84), rgba(6, 30, 26, 0.92));
+}
+
+.nx-refs > .container-md {
+  position: relative;
+}
+
+.nx-refs .nx-h2 {
+  color: #FFFFFF;
+}
+
+.nx-refs .nx-intro {
+  color: #B4CCC2;
+}
+
+.nx-refs .nx-eyebrow {
+  color: var(--nx-mint);
+  margin-bottom: 0.75rem;
+}
+
+.nx-ref-columns {
+  column-gap: 4rem;
+}
+
+.nx-ref-group {
+  break-inside: avoid;
+  padding-bottom: 2.5rem;
+}
+
+.nx-ref-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.nx-ref-list li {
+  display: inline;
+}
+
+/* Separator after each name rather than before the next, so a wrapped line
+   ends on a dot instead of starting with one. */
+.nx-ref-list li:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.5em;
+  color: var(--nx-mint);
+}
+
+@media (min-width: 768px) {
+  .nx-ref-columns {
+    column-count: 2;
+  }
+}
+
+/* --- Contact --- */
+
+.nx-contact-grid {
+  display: grid;
+  gap: 2rem 4rem;
+}
+
+.nx-address {
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 1.5rem 0 0;
+}
+
+.nx-contact-list {
+  display: grid;
+  gap: 1.125rem;
+  margin: 0;
+}
+
+.nx-contact-list > div {
+  display: grid;
+  gap: 0.25rem 1rem;
+  padding-top: 1.125rem;
+  border-top: 1px solid var(--nx-line);
+}
+
+.nx-contact-list dt {
+  font-family: var(--nx-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--nx-muted);
+  padding-top: 0.3125rem;
+}
+
+.nx-contact-list dd {
+  margin: 0;
+}
+
+@media (min-width: 576px) {
+  .nx-contact-list > div {
+    grid-template-columns: 11rem minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .nx-contact-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    align-items: start;
+  }
+}
+
+/* --- Footer --- */
+
+.nx + footer {
+  margin-top: 0;
+  border-top: 0;
+}
+
+footer .nx-credits {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  margin: 0;
+}

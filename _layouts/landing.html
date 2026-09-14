@@ -1,0 +1,102 @@
+---
+layout: base
+---
+{%- comment -%}
+  Bilingual one-page home. All copy comes from _data/home/<page.language>.yml,
+  so index.html (hr) and en/index.html (en) share this markup and differ only
+  in their data file.
+{%- endcomment -%}
+{%- assign t = site.data.home[page.language] -%}
+
+<header class="nx-hero">
+  <img class="nx-hero-img"
+       src="{{ '/assets/img/hero-telascica.jpg' | relative_url }}"
+       srcset="{{ '/assets/img/hero-telascica-1280.jpg' | relative_url }} 1280w, {{ '/assets/img/hero-telascica.jpg' | relative_url }} 2400w"
+       sizes="100vw"
+       alt="{{ t.hero.image_alt }}">
+  <div class="container-md nx-hero-body">
+    <h1 class="nx-hero-title">NiX</h1>
+    <p class="nx-hero-tagline">{{ t.hero.tagline }}</p>
+  </div>
+</header>
+
+<main class="nx">
+  <section id="about" class="nx-section nx-about">
+    <div class="container-md nx-about-grid">
+      <h2 class="nx-eyebrow">{{ t.about.title }}</h2>
+      <div>
+        <p class="nx-lead">{{ t.about.lead }}</p>
+        <p class="nx-founder">{{ t.about.founder }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="nx-section nx-services">
+    <div class="container-md">
+      <div class="nx-section-head">
+        <h2 class="nx-h2">{{ t.services.title }}</h2>
+        <p class="nx-intro">{{ t.services.intro }}</p>
+      </div>
+      <ul class="nx-service-grid" role="list">
+        {%- for service in t.services.items %}
+        <li class="nx-service">
+          <span class="nx-service-icon" aria-hidden="true"><i class="fas fa-{{ service.icon }}"></i></span>
+          <h3 class="nx-h3">{{ service.title }}</h3>
+          <p>{{ service.text }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section id="references" class="nx-section nx-refs">
+    <div class="container-md">
+      <div class="nx-section-head">
+        <h2 class="nx-h2">{{ t.references.title }}</h2>
+        <p class="nx-intro">{{ t.references.subtitle }}</p>
+      </div>
+      <div class="nx-ref-columns">
+        {%- for group in t.references.groups %}
+        <div class="nx-ref-group">
+          <h3 class="nx-eyebrow">{{ group.title }}</h3>
+          <ul class="nx-ref-list" role="list">
+            {%- for item in group.items %}
+            <li>{{ item }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="nx-section nx-contact">
+    <div class="container-md nx-contact-grid">
+      <div>
+        <h2 class="nx-h2">{{ t.contact.title }}</h2>
+        <address class="nx-address">
+          <strong>{{ t.contact.name }}</strong><br>
+          {{ t.contact.address }}
+        </address>
+      </div>
+      <dl class="nx-contact-list">
+        <div>
+          <dt>{{ t.contact.phone_label }}</dt>
+          <dd><a href="tel:{{ t.contact.phone | remove: ' ' }}">{{ t.contact.phone }}</a></dd>
+        </div>
+        <div>
+          <dt>{{ t.contact.email_label }}</dt>
+          <dd><a href="mailto:{{ t.contact.email }}">{{ t.contact.email }}</a></dd>
+        </div>
+        <div>
+          <dt>{{ t.contact.profiles_label }}</dt>
+          <dd><a href="{{ t.contact.linkedin }}">LinkedIn</a> · <a href="{{ t.contact.researchgate }}">ResearchGate</a></dd>
+        </div>
+        <div>
+          <dt>{{ t.contact.languages_label }}</dt>
+          <dd>{{ t.contact.languages }}</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+</main>
